@@ -118,3 +118,5 @@ export WORKON_HOME=~/.venvs
 source /usr/bin/virtualenvwrapper.sh
 
 alias config="/usr/bin/git --git-dir=$HOME/.nhh-config/ --work-tree=$HOME"
+
+#comment
