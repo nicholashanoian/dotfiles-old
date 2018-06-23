@@ -115,7 +115,10 @@ export TRELLO_EXPIRATION="never"
 
 # virtualenvwrapper
 export WORKON_HOME=~/.venvs
-source /usr/bin/virtualenvwrapper.sh
+
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+	source /usr/bin/virtualenvwrapper.sh
+fi
 
 alias config="/usr/bin/git --git-dir=$HOME/.nhh-config/ --work-tree=$HOME"
 
