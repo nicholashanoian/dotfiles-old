@@ -14,10 +14,10 @@ curl -Lks bit.do/nhh-cfg | /bin/bash
 
 This will clone the bare repository to =~/.nhh-config= and copy the relevant configuration files to the home directory. It will also copy a few useful scripts to the =~/nhh-install= directory. Use the following scripts to install the packages and programs that I use most frequently.
 
-- =pacman.sh= :: installs normal packages
-- =yaourt.sh= :: installs aur packages
-- =oh-my-zsh.sh= :: installs =oh-my-zsh=
-- =venv.sh= :: installs =virtualenvwrapper= and creates a new virtual environment called =py3=
+- =pacman.sh= :: Installs standard packages
+- =yaourt.sh= :: Installs aur packages
+- =oh-my-zsh.sh= :: Installs =oh-my-zsh=
+- =venv.sh= :: Installs =virtualenvwrapper= and creates a new virtual environment called =py3=
 
 
 
