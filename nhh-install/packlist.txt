@@ -19,5 +19,3 @@ neofetch
 viewnior
 pass
 cmatrix
-yaourt
-pip
