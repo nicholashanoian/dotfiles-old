@@ -2,7 +2,7 @@
 
 * About
 
-This repository is used to set up Manjaro i3 to my liking.
+This repository is used to set up Manjaro i3 to my liking. Thanks to [[https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/][Nicola Paolucci]] for the article which helped set up the installation system.
 
 * Installation
 
