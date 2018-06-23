@@ -28,7 +28,7 @@ This will clone the bare repository to =~/.nhh-config= and copy the relevant con
 gpg --full-gen-key
 #+END_SRC
 - Choose defaults and set to never expire.
-- Full Name: =First Last=
+- Full Name: =John Doe=
 - Email: =johndoe@test.com=
 - For help see [[https://www.gnupg.org/gph/en/manual.html]].
 *** Transfer keys to another computer
