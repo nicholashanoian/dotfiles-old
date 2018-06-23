@@ -45,8 +45,8 @@ gpg --edit-key 'Nicholas Hanoian <nicholashanoian@gmail.com>'
 trust
 5
 y
-<C-d>
 #+END_SRC
+- Press =C-d= to finish.
 **** Additional steps for Windows
 - Install [[https://github.com/Baggykiin/pass-winmenu][pass-winmenu]] (you want pass-winmenu-nogpg).
 - Install [[https://gnupg.org/download/index.html][gpg]] (you want normal gpg not gpg4win. this should be the second item down under "Windows").
