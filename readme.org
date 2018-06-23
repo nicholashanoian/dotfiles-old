@@ -19,5 +19,72 @@ This will clone the bare repository to =~/.nhh-config= and copy the relevant con
 - =oh-my-zsh.sh= :: Installs =oh-my-zsh=
 - =venv.sh= :: Installs =virtualenvwrapper= and creates a new virtual environment called =py3=
 
-
+* Help
+** Pacman
+- Remove orphan packages by using =pacman -Rns $(pacman -Qtdq)=.
+** Pass
+*** Create a new key
+#+BEGIN_SRC sh
+gpg --full-gen-key
+#+END_SRC
+- Choose defaults and set to never expire.
+- Full Name: =First Last=
+- Email: =johndoe@test.com=
+- For help see [[https://www.gnupg.org/gph/en/manual.html]].
+*** Transfer keys to another computer
+- First, from a computer where the keys are already located:
+#+BEGIN_SRC sh
+gpg --export-secret-keys -a <keyid> > private.asc
+gpg --export -a <keyid> > public.asc
+#+END_SRC
+- Copy these two files to a flash drive and copy them onto the new computer. Then you need to import them and trust them:
+#+BEGIN_SRC sh
+gpg --import private.asc
+gpg --import public.asc
+gpg --edit-key 'Nicholas Hanoian <nicholashanoian@gmail.com>'
+trust
+5
+y
+<C-d>
+#+END_SRC
+**** Additional steps for Windows
+- Install [[https://github.com/Baggykiin/pass-winmenu][pass-winmenu]] (you want pass-winmenu-nogpg).
+- Install [[https://gnupg.org/download/index.html][gpg]] (you want normal gpg not gpg4win. this should be the second item down under "Windows").
+- =ssh-keygen= and add to [[gitlab.com]].
+- Clone password repository into =C:\Users\<username>\.password-store=.
+- =C-M-p= to launch =pass-winmenu=.
+- =C-M-P= to auto-fill when in a browser.
+*** Storing new passwords
+#+BEGIN_SRC sh
+pass generate <newwebsite>
+pass edit <newwebsite>
+#+END_SRC
+- This should open up the password file in an editor. Add a new line: =username: <theusername>=.
+- You can add a number at the end of =pass generate= to specify the length of the password.
+- You can generate passwords with only letters and numbers by passing the =-n= flag to the end of the password.
+- For example, =pass generate test.com 16 -n= would create a new password for test.com which is 16 characters long and is comprised of only letters and numbers.
+- You can also use =pass insert <newwebsite>= to set the password manually.
+- You can add a =-m= flag to allow for multiple lines when using =pass insert=.
+*** Retrieve passwords
+- The following command will display the password in the terminal. You can add the =-c= flag to copy to the clipboard.
+#+BEGIN_SRC sh
+pass <nameofwebsite>
+#+END_SRC
+** Python
+*** Virtual Environments
+**** Setup
+- Install =virtualenvwrapper=, a wrapper to =virtualenv= which adds some useful commands to make it easy to work on different python environments.
+#+BEGIN_SRC sh
+  sudo pip install virtualenvwrapper
+#+END_SRC
+- Add these lines to =.zshrc= to load =virtualenvwrapper= when booting up.
+#+BEGIN_SRC sh
+export WORKON_HOME=~/.venvs
+source /usr/bin/virtualenvwrapper.sh
+#+END_SRC
+**** Usage
+- Environments are stored in =~/.venvs=.
+- To activate an environment: ex: =workon py3=.
+- To make an environment: =mkvirtualenv py3=.
+- To deactivate an environment: =deactivate=.
 
