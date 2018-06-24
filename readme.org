@@ -20,6 +20,10 @@ This will clone the bare repository to =~/.nhh-config= and copy the relevant con
 - =venv.sh= :: Installs =virtualenvwrapper= and creates a new virtual environment called =py3=
 
 * Help
+** Dual-Booting
+When dual-booting with Windows, use a live Linux USB to create a partition formatted with NTFS for the Windows installation. Then, proceed to install windows on said partition. This will also create an EFI partition that is typically 100 MB. Once Windows is installed, install Linux on the remainder of the disk. There should be a sizable swap partition (typically 1.5x the size of your RAM). The rest should be the root partition formatted with ext4. 
+
+If Windows was not installed first, or you are not dual-booting, you need to create a boot partition. It should be the first partition on the disk, formatted with VFAT, around 100-200 MB in size, flagged with =boot= and =esp=, and should be mounted on =/boot/efi/=.
 ** Pacman
 - Remove orphan packages by using =pacman -Rns $(pacman -Qtdq)=.
 ** Pass
