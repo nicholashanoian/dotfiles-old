@@ -2,8 +2,8 @@ Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
+Xft.autohint: true
+Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
 ! XTerm*background: #2b2b2b
@@ -19,6 +19,7 @@ URxvt*fadeColor:                       [0]#000000
 URxvt*cursorColor:                     #16A085
 URxvt*pointerColorBackground:          #2B2C2B
 URxvt*pointerColorForeground:          #16A085
+URxvt.internalBorder: 				   8
 
 ! URxvt.transparent:          true
 ! URxvt.shading:              20
@@ -64,22 +65,22 @@ URxvt*pointerColorForeground:          #16A085
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! konsole dark pastels
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-URxvt*color0: #3f3f3f
-URxvt*color1: #705050
-URxvt*color2: #60b48a
-URxvt*color3: #dfaf8f
-URxvt*color4: #9ab9d7
-URxvt*color5: #dc8cc4
-URxvt*color6: #8cd1d3
-URxvt*color7: #dcdccd
-URxvt*color8: #709080
-URxvt*color9: #dca3a3
-URxvt*color10: #72d5a2
-URxvt*color11: #f0dfaf
-URxvt*color12: #94c0f3
-URxvt*color13: #ec93d5
-URxvt*color14: #93e1e3
-URxvt*color15: #ffffff
+*color0: #3f3f3f
+*color1: #705050
+*color2: #60b48a
+*color3: #dfaf8f
+*color4: #9ab9d7
+*color5: #dc8cc4
+*color6: #8cd1d3
+*color7: #dcdccd
+*color8: #709080
+*color9: #dca3a3
+*color10: #72d5a2
+*color11: #f0dfaf
+*color12: #94c0f3
+*color13: #ec93d5
+*color14: #93e1e3
+*color15: #ffffff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! zenburn
@@ -111,12 +112,14 @@ Xcursor.size:  0
 ! XTerm*faceName:                   Terminus:size=11:antialias=true
 ! XTerm*selectToClipboard:          true
 
-!URxvt.font:                       xft:DejaVuSansMono Nerd Font Mono:size=10
-URxvt.font:                       xft:DejaVu Sans Mono:size=13
+URxvt.font:                       xft:Fira Mono Medium:style=Medium,Regular:size=13, xft:DejaVu Sans Mono:style=bold:size=16
+!URxvt.font:                       xft:DejaVu Sans Mono:size=13
+!URxvt.font: 					   xft:FuraMono Nerd Font Mono:style=Regular:size=14
+
 
 ! alternative font settings with 'terminus':
-!URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
-!URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
 URxvt.depth:                      32
@@ -133,15 +136,19 @@ URxvt*saveLines:                  5000
 !! https://github.com/pkkolos/urxvt-scripts
 
 
-URxvt.perl-ext-common:  font-size,vtwheel
+URxvt.perl-ext-common:  matcher,font-size,vtwheel
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+
 
 URxvt.font-size.step: 7
 URxvt.keysym.C-equal:  font-size:increase
 URxvt.keysym.C-dash:   font-size:decrease
-URxvt.keysym.C-mouse-5: font-size:increase
+! URxvt.keysym.C-mouse-5: font-size:increase
 ! URxvt.keysym.C-<Btn4Up>: font-size:increase
 ! URxvt.keysym.C-<Btn5Down>: font-size:decrease
-URxvt.keysym.C-mouse-4: font-size:decrease
+! URxvt.keysym.C-mouse-4: font-size:decrease
 
 
 
@@ -240,7 +247,7 @@ URxvt.keysym.C-mouse-4: font-size:decrease
 ! URxvt*internalBorder:            number
 ! URxvt*borderLess:                true
 ! URxvt*lineSpace:                 number
-! URxvt*letterSpace: 			   number
+!URxvt*letterSpace: 			   number
 ! URxvt*skipBuiltinGlyphs:         boolean
 ! URxvt*pointerBlankDelay:         number
 ! URxvt*backspacekey:              string

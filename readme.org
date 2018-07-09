@@ -18,6 +18,7 @@ This will clone the bare repository to =~/.nhh-config= and copy the relevant con
 - =yaourt.sh= :: Installs aur packages
 - =oh-my-zsh.sh= :: Installs =oh-my-zsh=
 - =venv.sh= :: Installs =virtualenvwrapper= and creates a new virtual environment called =py3=
+- =install_pulse= :: Installs pulse audio
 
 * Help
 ** Dual-Booting
@@ -59,7 +60,6 @@ Device             Start       End   Sectors   Size Type
   tmpfs             /tmp         tmpfs         defaults,noatime,mode=1777 0      0
 #+END_EXAMPLE
 
-
 *** Installing the Boot Loader
 Now, we need to add our boot loader, in this case grub, to the EFI partition. This can be done with the =grub-install= command.
 
@@ -89,6 +89,8 @@ However, sometimes this does not properly add the boot loader. With Windows, use
 - [[https://wiki.archlinux.org/index.php/GRUB][Arch Linux Wiki - Grub]]
 - [[http://www.rodsbooks.com/efi-bootloaders/installation.html][Rod Smith - General EFI Reference]]
 
+** Fonts
+Edit =.config/fontconfig/fonts.conf=
 ** Pacman
 - Remove orphan packages by using =pacman -Rns $(pacman -Qtdq)=.
 ** Pass
