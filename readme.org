@@ -91,6 +91,21 @@ However, sometimes this does not properly add the boot loader. With Windows, use
 
 ** Fonts
 Edit =.config/fontconfig/fonts.conf=
+** Mathematica
+*** Registration
+#+BEGIN_SRC sh
+math
+#+END_SRC
+*** Startup Issues
+[[https://forums.gentoo.org/viewtopic-p-8198000.html?sid=ab27c1ca8e1927691858595185e18284]]
+*** Fix magnification
+#+BEGIN_SRC
+SetOptions[$FrontEnd, Magnification -> 1.25]
+#+END_SRC
+** Org
+- Plain timestamp :: shows up until date, does not persist whether TODO or not
+- Scheduled :: persists past due date whether todo or no todo state
+- Deadline :: persists past due date whether todo or no todo state
 ** Pacman
 - Remove orphan packages by using =pacman -Rns $(pacman -Qtdq)=.
 ** Pass
