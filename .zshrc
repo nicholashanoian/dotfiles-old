@@ -125,5 +125,7 @@ fi
 alias config="/usr/bin/git --git-dir=$HOME/.nhh-config/ --work-tree=$HOME"
 alias R="R --quiet --no-save"
 
+alias open=xdg-open
+
 
 #comment
