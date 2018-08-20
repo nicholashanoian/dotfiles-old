@@ -1,4 +1,7 @@
 #+TITLE: Manjaro i3 Setup
+* NOTE
+I am no longer using i3. To see my new dotfiles, see [[https://github.com/nicholashanoian/dotfiles][new repository]].
+
 
 * About
 
